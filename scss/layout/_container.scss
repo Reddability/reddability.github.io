@@ -1,0 +1,46 @@
+#container {
+	width: 860px;
+	margin: 0 auto;
+
+	section {
+		padding: 35px 0;
+		&#first_section {
+			#screenshots {
+				width: 390px;
+				height: 244px;
+
+				float: left;
+
+				background-image: url('../img/screenshot.png');
+				background-size: 390px 244px;
+
+				@include box-shadow(0, 0, 7px, rgba(0, 0, 0, .5));
+
+				#screenshots_enlarge {
+					left: 0;
+					height: 24px;
+					width: 24px;
+					margin: 6px 0 0 6px;
+
+					background-image: url('../img/image_buttons.png');
+					background-color: white;
+					background-position: 0 0;
+					background-size: 48px;
+
+					&:hover {
+						background-position: 0 24px;
+					}
+				}
+			}
+
+			#features {
+				float: left;
+				margin-left: 25px;
+				white-space: nowrap;
+				ul {
+					list-style: none inside;
+				}
+			}
+		}
+	}
+}
