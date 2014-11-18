@@ -1,44 +1,56 @@
 #container {
-	width: 860px;
+	$container_width: 1024px;
+	width: $container_width;
 	margin: 0 auto;
 
 	section {
 		padding: 35px 0;
 		&#first_section {
+			$section_height: 280px;
+			$screenshots_width: 448px;
 			#screenshots {
-				width: 390px;
-				height: 244px;
+				width: $screenshots_width;
+				height: $section_height;
 
 				float: left;
 
 				background-image: url('../img/screenshot.png');
-				background-size: 390px 244px;
+				background-size: $screenshots_width $section_height;
 
 				@include box-shadow(0, 0, 7px, rgba(0, 0, 0, .5));
 
 				#screenshots_enlarge {
 					left: 0;
-					height: 24px;
-					width: 24px;
+					height: 36px;
+					width: 36px;
 					margin: 6px 0 0 6px;
 
 					background-image: url('../img/image_buttons.png');
 					background-color: white;
 					background-position: 0 0;
-					background-size: 48px;
+					background-size: 72px;
 
 					&:hover {
-						background-position: 0 24px;
+						background-position: 0 36px;
 					}
 				}
 			}
 
 			#features {
+				$features_padding: 45px;
+				$features_amount: 10;
+
+				width: ($container_width - $screenshots_width) - $features_padding;
 				float: left;
-				margin-left: 25px;
-				white-space: nowrap;
+				padding-left: $features_padding;
 				ul {
 					list-style: none inside;
+					li:before {
+						line-height: $section_height / $features_amount;
+						content: "•";
+						margin-right: 10px;
+						vertical-align: middle;
+					}
 				}
 			}
 		}

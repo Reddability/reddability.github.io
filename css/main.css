@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
  * http://cssreset.com
@@ -112,35 +113,40 @@ header {
       text-shadow: 0 0 5px #444; }
 
 #container {
-  width: 860px;
+  width: 1024px;
   margin: 0 auto; }
   #container section {
     padding: 35px 0; }
     #container section#first_section #screenshots {
-      width: 390px;
-      height: 244px;
+      width: 448px;
+      height: 280px;
       float: left;
       background-image: url("../img/screenshot.png");
-      background-size: 390px 244px;
+      background-size: 448px 280px;
       -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
       -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
       box-shadow: 0 0 7px rgba(0, 0, 0, 0.5); }
       #container section#first_section #screenshots #screenshots_enlarge {
         left: 0;
-        height: 24px;
-        width: 24px;
+        height: 36px;
+        width: 36px;
         margin: 6px 0 0 6px;
         background-image: url("../img/image_buttons.png");
         background-color: white;
         background-position: 0 0;
-        background-size: 48px; }
+        background-size: 72px; }
         #container section#first_section #screenshots #screenshots_enlarge:hover {
-          background-position: 0 24px; }
+          background-position: 0 36px; }
     #container section#first_section #features {
+      width: 531px;
       float: left;
-      margin-left: 25px;
-      white-space: nowrap; }
+      padding-left: 45px; }
       #container section#first_section #features ul {
         list-style: none inside; }
+        #container section#first_section #features ul li:before {
+          line-height: 28px;
+          content: "•";
+          margin-right: 10px;
+          vertical-align: middle; }
 
 /*# sourceMappingURL=main.css.map */
