@@ -1,4 +1,4 @@
-/css/
+*.css.map
 .DS_Store
 *.sublime-project
 *.sublime-workspace

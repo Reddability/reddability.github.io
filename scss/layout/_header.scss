@@ -1,0 +1,38 @@
+$header_height: 175px;
+$title_size: 128px;
+
+header {
+	height: $header_height;
+	background-color: $blue_white;
+	border-bottom: 1px solid $blue_light;
+	#title {
+		display: table;
+		height: $title_size;
+
+		margin: 0 auto;
+		padding: (($header_height - $title_size) / 2) 0;
+
+		#logo {
+			height: $title_size;
+			width: $title_size;
+			float: left;
+
+			background-image: url('../img/logo.png');
+			background-repeat: no-repeat;
+			background-size: $title_size;
+		}
+
+		#title_text {
+			display: table-cell;
+			vertical-align: middle;
+			h1 {
+				font-size: 32px;
+				line-height: 1.2em;
+			}
+			h2 {
+				font-size: 18px;
+				line-height: 1.2em;
+			}
+		}
+	}
+}
