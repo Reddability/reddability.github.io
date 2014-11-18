@@ -35,4 +35,30 @@ header {
 			}
 		}
 	}
+
+	#ribbon {
+		font: 15px 'Roboto Regular', 'Helvetica Neue', Helvetica, sans-serif;
+
+		background-color: $blue_dark;
+		overflow: hidden;
+		white-space: nowrap;
+
+		position: absolute;
+		right: -50px;
+		top: 40px;
+
+		@include transform(45deg);
+		@include box-shadow(0, 0, 10px, #888);
+
+		a {
+			border: 1px solid $blue_light;
+			color: white;
+			display: block;
+			margin: 1px 0;
+			padding: 10px 50px;
+			text-align: center;
+			text-decoration: none;
+			text-shadow: 0 0 5px #444;
+		}
+	}
 }

@@ -46,8 +46,14 @@ table {
 
 @font-face {
   font-family: 'Roboto Light';
-  src: url("../fonts/roboto-light.eot");
-  src: url("../fonts/roboto-light.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-light.woff2") format("woff2"), url("../fonts/roboto-light.woff") format("woff"), url("../fonts/roboto-light.ttf") format("truetype"), url("../fonts/roboto-light.svg#robotolight") format("svg");
+  src: url("../fonts/Roboto Light/roboto-light.eot");
+  src: url("../fonts/Roboto Light/roboto-light.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto Light/roboto-light.woff2") format("woff2"), url("../fonts/Roboto Light/roboto-light.woff") format("woff"), url("../fonts/Roboto Light/roboto-light.ttf") format("truetype"), url("../fonts/Roboto Light/roboto-light.svg#robotolight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url("../fonts/Roboto Regular/roboto-regular.eot");
+  src: url("../fonts/Roboto Regular/roboto-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto Regular/roboto-regular.woff2") format("woff2"), url("../fonts/Roboto Regular/roboto-regular.woff") format("woff"), url("../fonts/Roboto Regular/roboto-regular.ttf") format("truetype"), url("../fonts/Roboto Regular/roboto-regular.svg#robotoregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 body {
@@ -78,5 +84,30 @@ header {
       header #title #title_text h2 {
         font-size: 18px;
         line-height: 1.2em; }
+  header #ribbon {
+    font: 15px 'Roboto Regular', 'Helvetica Neue', Helvetica, sans-serif;
+    background-color: #369;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    right: -50px;
+    top: 40px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-tranfrom: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-box-shadow: 0 0 10px #888;
+    -moz-box-shadow: 0 0 10px #888;
+    box-shadow: 0 0 10px #888; }
+    header #ribbon a {
+      border: 1px solid #c4dbf1;
+      color: white;
+      display: block;
+      margin: 1px 0;
+      padding: 10px 50px;
+      text-align: center;
+      text-decoration: none;
+      text-shadow: 0 0 5px #444; }
 
 /*# sourceMappingURL=main.css.map */

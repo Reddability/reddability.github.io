@@ -1,11 +1,24 @@
 @font-face {
     font-family: 'Roboto Light';
-    src: url('../fonts/roboto-light.eot');
-    src: url('../fonts/roboto-light.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/roboto-light.woff2') format('woff2'),
-         url('../fonts/roboto-light.woff') format('woff'),
-         url('../fonts/roboto-light.ttf') format('truetype'),
-         url('../fonts/roboto-light.svg#robotolight') format('svg');
+    src: url('../fonts/Roboto Light/roboto-light.eot');
+    src: url('../fonts/Roboto Light/roboto-light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto Light/roboto-light.woff2') format('woff2'),
+         url('../fonts/Roboto Light/roboto-light.woff') format('woff'),
+         url('../fonts/Roboto Light/roboto-light.ttf') format('truetype'),
+         url('../fonts/Roboto Light/roboto-light.svg#robotolight') format('svg');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url('../fonts/Roboto Regular/roboto-regular.eot');
+    src: url('../fonts/Roboto Regular/roboto-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto Regular/roboto-regular.woff2') format('woff2'),
+         url('../fonts/Roboto Regular/roboto-regular.woff') format('woff'),
+         url('../fonts/Roboto Regular/roboto-regular.ttf') format('truetype'),
+         url('../fonts/Roboto Regular/roboto-regular.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
