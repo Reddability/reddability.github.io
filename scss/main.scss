@@ -1,6 +1,9 @@
 @import 'helpers/variables';
 @import 'helpers/mixins';
 
+@import 'vendors/default/magnific-popup';
+@import 'vendors/override/magnific-popup';
+
 @import 'base/reset';
 @import 'base/fonts';
 @import 'base/default';

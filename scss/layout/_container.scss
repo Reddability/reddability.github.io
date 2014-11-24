@@ -14,26 +14,10 @@
 
 				float: left;
 
-				background-image: url('../img/screenshot.png');
+				background-image: url('../img/screenshot_preview.png');
 				background-size: $screenshots_width $section_height;
 
 				@include box-shadow(0, 0, 7px, rgba(0, 0, 0, .5));
-
-				#screenshots_enlarge {
-					left: 0;
-					height: 36px;
-					width: 36px;
-					margin: 6px 0 0 6px;
-
-					background-image: url('../img/image_buttons.png');
-					background-color: white;
-					background-position: 0 0;
-					background-size: 72px;
-
-					&:hover {
-						background-position: 0 36px;
-					}
-				}
 			}
 
 			#features {
