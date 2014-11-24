@@ -5,17 +5,29 @@
 
 	section {
 		padding: 35px 0;
+		$left_width: 448px;
+		$right_width: ($container_width - $left_width);
+
+		.left {
+			width: $left_width;
+			float: left;
+		}
+
+		.right {
+			width: $right_width;
+			float: left;
+		}
+
 		&#first_section {
 			$section_height: 280px;
-			$screenshots_width: 448px;
+			height: $section_height;
+
 			#screenshots {
-				width: $screenshots_width;
+				width: 100%;
 				height: $section_height;
 
-				float: left;
-
 				background-image: url('../img/screenshot_preview.png');
-				background-size: $screenshots_width $section_height;
+				background-size: $left_width $section_height;
 
 				@include box-shadow(0, 0, 7px, rgba(0, 0, 0, .5));
 			}
@@ -24,9 +36,9 @@
 				$features_padding: 45px;
 				$features_amount: 10;
 
-				width: ($container_width - $screenshots_width) - $features_padding;
-				float: left;
+				width: $right_width - $features_padding;
 				padding-left: $features_padding;
+
 				ul {
 					list-style: none inside;
 					li:before {
