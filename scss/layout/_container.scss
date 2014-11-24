@@ -4,18 +4,19 @@
 	margin: 0 auto;
 
 	section {
-		padding: 35px 0;
+		padding: 20px 0;
 		$left_width: 448px;
-		$right_width: ($container_width - $left_width);
+		$right_padding: 45px;
+		$right_width: ($container_width - $left_width) - $right_padding;
 
-		.left {
+		.left, .right {
 			width: $left_width;
 			float: left;
 		}
 
 		.right {
 			width: $right_width;
-			float: left;
+			padding-left: $right_padding;
 		}
 
 		&#first_section {
@@ -33,11 +34,9 @@
 			}
 
 			#features {
-				$features_padding: 45px;
 				$features_amount: 10;
 
-				width: $right_width - $features_padding;
-				padding-left: $features_padding;
+				width: $right_width;
 
 				ul {
 					list-style: none inside;
@@ -47,6 +46,28 @@
 						margin-right: 10px;
 						vertical-align: middle;
 					}
+				}
+			}
+		}
+
+		&#second_section {
+			#buttons {
+				$button_height: 50px;
+				$button_padding: 25px;
+				$button_width: ($right_width / 2) - ($button_padding * 2);
+
+				height: $button_height;
+				vertical-align: middle;
+				#chrome_webstore, #paypal_donate {
+					float: left;
+					margin-right: $button_padding;
+					@include svg($button_height, $button_width - $button_padding, '../img/chrome_webstore.svg');
+				}
+				#paypal_donate {
+					$paypal_height: 40px;
+					$paypal_vertical_margin: ($button_height - $paypal_height) / 2;
+					margin: $paypal_vertical_margin $button_padding $paypal_vertical_margin 0;
+					@include svg($paypal_height, $button_width, '../img/paypal_donate.svg');
 				}
 			}
 		}

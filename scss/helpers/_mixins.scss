@@ -11,3 +11,13 @@
 	-moz-box-shadow: $x $y $radius $color;
 	box-shadow: $x $y $radius $color;
 }
+
+@mixin svg($height, $width, $url) {
+	height: $height;
+	width: $width;
+
+	background-image: url($url);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
