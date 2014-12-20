@@ -29,15 +29,19 @@ $('#screenshots').magnificPopup({
 	]
 });
 
-$('#markdown_textarea').bind('input propertychange', function() {
-
+function updatePreview() {
 	var preview = $('#markdown_preview'),
-		previewContent = $('#markdown_preview_content');
+		previewContent = $('#markdown_preview_content'),
+		previewTextarea = $('#markdown_textarea');
 
-	if(this.value.length) {
-		previewContent.html(markdown.toHTML(this.value));
+	if(previewTextarea.val().length) {
+		previewContent.html(markdown.toHTML(previewTextarea.val()));
 		preview.show();
 	} else {
 		preview.hide();
 	}
-});
+}
+
+$(updatePreview);
+
+$('#markdown_textarea').bind('input propertychange', updatePreview);

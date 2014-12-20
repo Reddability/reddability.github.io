@@ -469,19 +469,25 @@ body {
   font-family: "Roboto Light", "Helvetica Neue", Helvetica, sans-serif;
   line-height: 1.5em; }
 
+a {
+  color: #369;
+  text-decoration: none; }
+  a:visited {
+    color: #369; }
+
 header {
   height: 175px;
-  background-color: #F0F8FF;
-  border-bottom: 1px solid #c4dbf1; }
+  border-bottom: 1px solid #c4dbf1;
+  background-color: #F0F8FF; }
   header #title {
     display: table;
     height: 128px;
-    margin: 0 auto;
-    padding: 23.5px 0; }
+    padding: 23.5px 0;
+    margin: 0 auto; }
     header #title #logo {
+      float: left;
       height: 128px;
       width: 128px;
-      float: left;
       background-image: url("../img/logo.png");
       background-repeat: no-repeat;
       background-size: 128px; }
@@ -495,13 +501,6 @@ header {
         font-size: 18px;
         line-height: 1.2em; }
   header #ribbon {
-    font: 15px 'Roboto Regular', 'Helvetica Neue', Helvetica, sans-serif;
-    background-color: #369;
-    overflow: hidden;
-    white-space: nowrap;
-    position: absolute;
-    right: -50px;
-    top: 40px;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-tranfrom: rotate(45deg);
@@ -509,13 +508,20 @@ header {
     transform: rotate(45deg);
     -webkit-box-shadow: 0 0 10px #888;
     -moz-box-shadow: 0 0 10px #888;
-    box-shadow: 0 0 10px #888; }
+    box-shadow: 0 0 10px #888;
+    position: absolute;
+    top: 40px;
+    right: -50px;
+    overflow: hidden;
+    background-color: #369;
+    font-size: 15px;
+    white-space: nowrap; }
     header #ribbon a {
+      display: block;
+      padding: 10px 50px;
+      margin: 1px 0;
       border: 1px solid #c4dbf1;
       color: white;
-      display: block;
-      margin: 1px 0;
-      padding: 10px 50px;
       text-align: center;
       text-decoration: none;
       text-shadow: 0 0 5px #444; }
@@ -553,37 +559,95 @@ header {
       line-height: 28px;
       content: "•"; }
 
-#markdown_textarea {
-  min-height: 100px;
-  max-width: 100%;
-  min-width: 100%;
-  box-sizing: border-box;
-  padding: 6px;
-  margin: 4px 0;
-  border: 1px solid #c4dbf1;
-  font-size: 14px; }
-  #markdown_textarea:focus, #markdown_textarea:active {
-    border-color: #369;
-    outline: none; }
-
-#markdown_preview {
-  display: none;
-  border: 1px solid #c4dbf1;
-  font: Verdana, Arial, Helvetica, sans-serif; }
-  #markdown_preview h3 {
-    height: 28px;
-    padding-left: 10px;
-    padding-top: 12px;
-    border-bottom: 1px solid #c4dbf1;
-    background-color: #F0F8FF;
-    color: black;
-    font-size: 16px;
-    font-weight: bolder;
-    line-height: 18px; }
-  #markdown_preview #markdown_preview_content {
-    margin: 5px 0 5px 10px;
-    font-size: 14px;
-    line-height: 26px; }
+#markdown {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 21px; }
+  #markdown #markdown_buttons {
+    height: 27px; }
+    #markdown #markdown_buttons .edit-btn {
+      position: relative;
+      display: inline-block;
+      float: left;
+      height: 25px;
+      width: 32px;
+      overflow: hidden;
+      margin-right: 12px;
+      border: 1px solid #c4dbf1;
+      border-radius: 1px;
+      background-color: white;
+      background-image: url("../img/markdown.png");
+      background-repeat: no-repeat;
+      background-size: 32px 250px;
+      color: transparent;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none; }
+      #markdown #markdown_buttons .edit-btn:last-of-type {
+        margin-right: 0; }
+      #markdown #markdown_buttons .edit-btn:hover, #markdown #markdown_buttons .edit-btn:active, #markdown #markdown_buttons .edit-btn:focus {
+        border-color: #369;
+        outline: none;
+        background-color: #F0F8FF; }
+      #markdown #markdown_buttons .edit-btn.btn-bold {
+        background-position: 0 0px; }
+      #markdown #markdown_buttons .edit-btn.btn-italic {
+        background-position: 0 -25px; }
+      #markdown #markdown_buttons .edit-btn.btn-strike {
+        background-position: 0 -50px; }
+      #markdown #markdown_buttons .edit-btn.btn-superscript {
+        background-position: 0 -75px; }
+      #markdown #markdown_buttons .edit-btn.btn-link {
+        background-position: 0 -100px; }
+      #markdown #markdown_buttons .edit-btn.btn-quote {
+        background-position: 0 -125px; }
+      #markdown #markdown_buttons .edit-btn.btn-code {
+        background-position: 0 -150px; }
+      #markdown #markdown_buttons .edit-btn.btn-list-unordered {
+        background-position: 0 -175px; }
+      #markdown #markdown_buttons .edit-btn.btn-list-ordered {
+        background-position: 0 -200px; }
+      #markdown #markdown_buttons .edit-btn.btn-table {
+        background-position: 0 -225px; }
+  #markdown #commenting_as {
+    margin-top: 6px;
+    line-height: 28px; }
+  #markdown #markdown_textarea {
+    min-height: 100px;
+    max-width: 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 6px;
+    margin: 4px 0;
+    border: 1px solid #c4dbf1;
+    font-size: inherit; }
+    #markdown #markdown_textarea:focus, #markdown #markdown_textarea:active {
+      border-color: #369;
+      outline: none; }
+  #markdown #markdown_preview {
+    display: none;
+    border: 1px solid #c4dbf1; }
+    #markdown #markdown_preview h3 {
+      height: 28px;
+      padding-left: 10px;
+      padding-top: 12px;
+      border-bottom: 1px solid #c4dbf1;
+      background-color: #F0F8FF;
+      color: black;
+      font-weight: bolder;
+      line-height: 18px; }
+    #markdown #markdown_preview a[href$="/s"], #markdown #markdown_preview a[href$="/spoiler"] {
+      color: transparent;
+      text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+      cursor: default; }
+      #markdown #markdown_preview a[href$="/s"]:hover, #markdown #markdown_preview a[href$="/spoiler"]:hover {
+        color: #666;
+        text-shadow: none; }
+    #markdown #markdown_preview #markdown_preview_content {
+      padding: 0 12px 12px 12px;
+      margin-top: 10px;
+      color: #666; }
 
 #buttons {
   vertical-align: middle;

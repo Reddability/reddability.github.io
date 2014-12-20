@@ -2,3 +2,12 @@ body {
 	font-family: $roboto;
 	line-height: 1.5em;
 }
+
+a {
+	color: $blue_dark;
+	text-decoration: none;
+
+	&:visited {
+		color: $blue_dark;
+	}
+}

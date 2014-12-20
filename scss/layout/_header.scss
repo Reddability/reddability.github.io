@@ -3,19 +3,22 @@ $title_size: 128px;
 
 header {
 	height: $header_height;
-	background-color: $blue_white;
 	border-bottom: 1px solid $blue_light;
+
+	background-color: $blue_white;
+
 	#title {
 		display: table;
-		height: $title_size;
 
-		margin: 0 auto;
+		height: $title_size;
 		padding: (($header_height - $title_size) / 2) 0;
+		margin: 0 auto;
 
 		#logo {
+			float: left;
+
 			height: $title_size;
 			width: $title_size;
-			float: left;
 
 			background-image: url('../img/logo.png');
 			background-repeat: no-repeat;
@@ -25,10 +28,12 @@ header {
 		#title_text {
 			display: table-cell;
 			vertical-align: middle;
+
 			h1 {
 				font-size: 32px;
 				line-height: 1.2em;
 			}
+
 			h2 {
 				font-size: 18px;
 				line-height: 1.2em;
@@ -37,25 +42,28 @@ header {
 	}
 
 	#ribbon {
-		font: 15px 'Roboto Regular', 'Helvetica Neue', Helvetica, sans-serif;
-
-		background-color: $blue_dark;
-		overflow: hidden;
-		white-space: nowrap;
-
-		position: absolute;
-		right: -50px;
-		top: 40px;
-
 		@include transform(45deg);
 		@include box-shadow(0, 0, 10px, #888);
 
+		position: absolute;
+		top: 40px;
+		right: -50px;
+
+		overflow: hidden;
+
+		background-color: $blue_dark;
+
+		font-size: 15px;
+		white-space: nowrap;
+
 		a {
-			border: 1px solid $blue_light;
-			color: white;
 			display: block;
-			margin: 1px 0;
+
 			padding: 10px 50px;
+			margin: 1px 0;
+			border: 1px solid $blue_light;
+
+			color: white;
 			text-align: center;
 			text-decoration: none;
 			text-shadow: 0 0 5px #444;
