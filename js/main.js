@@ -28,3 +28,16 @@ $('#screenshots').magnificPopup({
 		},
 	]
 });
+
+$('#markdown_textarea').bind('input propertychange', function() {
+
+	var preview = $('#markdown_preview'),
+		previewContent = $('#markdown_preview_content');
+
+	if(this.value.length) {
+		previewContent.html(markdown.toHTML(this.value));
+		preview.show();
+	} else {
+		preview.hide();
+	}
+});

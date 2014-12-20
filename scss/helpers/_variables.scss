@@ -12,3 +12,12 @@ $green: #79B949;
 $green_light: #EDFFDF;
 
 $red: #D16063;
+
+$container_width: 1024px;
+$section_vertical_padding: 20px;
+
+$first_section_height: 280px;
+
+$left_width: 448px;
+$right_padding: 45px;
+$right_width: ($container_width - $left_width) - $right_padding;

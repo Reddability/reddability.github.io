@@ -1,0 +1,32 @@
+#buttons {
+	$button_height: 50px;
+	$button_padding: 25px;
+	$button_width: ($right_width / 2) - ($button_padding * 2);
+
+	vertical-align: middle;
+
+	height: $button_height;
+	margin-bottom: $section_vertical_padding;
+
+	#chrome_webstore, #paypal_donate {
+		@include svg($button_height, $button_width - $button_padding, '../img/chrome_webstore.svg');
+
+		float: left;
+
+		margin-right: $button_padding;
+	}
+
+	#paypal_donate {
+		$paypal_height: 40px;
+		$paypal_vertical_margin: ($button_height - $paypal_height) / 2;
+		@include svg($paypal_height, $button_width, '../img/paypal_donate.svg');
+
+		margin: $paypal_vertical_margin $button_padding $paypal_vertical_margin 0;
+	}
+}
+
+#description {
+	p {
+		margin-bottom: $section_vertical_padding;
+	}
+}

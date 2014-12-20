@@ -1,0 +1,45 @@
+#markdown_textarea {
+	min-height: 100px;
+	max-width: 100%;
+	min-width: 100%;
+	box-sizing: border-box;
+	padding: 6px;
+	margin: 4px 0;
+	border: 1px solid $blue_light;
+
+	font-size: 14px;
+
+	&:focus, &:active {
+		border-color: $blue_dark;
+		outline: none;
+	}
+}
+
+#markdown_preview {
+	display: none;
+
+	border: 1px solid $blue_light;
+
+	font: Verdana, Arial, Helvetica, sans-serif;
+
+	h3 {
+		height: 28px;
+		padding-left: 10px;
+		padding-top: 12px;
+		border-bottom: 1px solid $blue_light;
+
+		background-color: $blue_white;
+
+		color: black;
+		font-size: 16px;
+		font-weight: bolder;
+		line-height: 18px;
+	}
+
+	#markdown_preview_content {
+		margin: 5px 0 5px 10px;
+
+		font-size: 14px;
+		line-height: 26px;
+	}
+}

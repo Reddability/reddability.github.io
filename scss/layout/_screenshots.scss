@@ -1,0 +1,9 @@
+#screenshots {
+	@include box-shadow(0, 0, 7px, rgba(0, 0, 0, .5));
+
+	height: $first_section_height;
+	width: 100%;
+
+	background-image: url('../img/screenshot_preview.png');
+	background-size: $left_width $first_section_height;
+}
