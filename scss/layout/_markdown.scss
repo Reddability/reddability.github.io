@@ -117,6 +117,7 @@
 		display: none;
 
 		border: 1px solid $blue_light;
+		font-size: small;
 
 		h3 {
 			height: 28px;
@@ -129,6 +130,17 @@
 			color: black;
 			font-weight: bolder;
 			line-height: 18px;
+		}
+		li {
+			list-style-position: inside;
+		}
+
+		blockquote {
+			border-left: 2px solid #369;
+			padding-left: 4px;
+			margin: 5px;
+			margin-right: 15px;
+			line-height: 16px;
 		}
 
 		a[href$="/s"], a[href$="/spoiler"] {

@@ -1,3 +1,5 @@
+var TEXTAREA = '#markdown_textarea';
+
 $('#screenshots').magnificPopup({
 	gallery: {
 		enabled: true,
@@ -35,7 +37,7 @@ function updatePreview() {
 		previewTextarea = $('#markdown_textarea');
 
 	if(previewTextarea.val().length) {
-		previewContent.html(markdown.toHTML(previewTextarea.val()));
+		previewContent.html(SnuOwnd.getParser().render(previewTextarea.val()));
 		preview.show();
 	} else {
 		preview.hide();
@@ -44,4 +46,4 @@ function updatePreview() {
 
 $(updatePreview);
 
-$('#markdown_textarea').bind('input propertychange', updatePreview);
+$(TEXTAREA).bind('input propertychange', updatePreview);
