@@ -41,22 +41,42 @@
 		<div class="left">
 			<div id="markdown">
 				<div id="markdown_buttons">
-					<a class="edit-btn btn-bold" title="Bold (Ctrl+B)"></a>
-					<a class="edit-btn btn-italic" title="Italic (Ctrl+I)"></a>
-					<a class="edit-btn btn-strike" title="Strike (Ctrl+S)"></a>
-					<a class="edit-btn btn-superscript" title="Super (Ctrl+'+')"></a>
-					<a class="edit-btn btn-link" title="Link (Ctrl+K)"></a>
-					<a class="edit-btn btn-quote" title="Quote (Ctrl+'<')"></a>
-					<a class="edit-btn btn-code" title="Code"></a>
-					<a class="edit-btn btn-list-unordered" title="Unordered list"></a>
-					<a class="edit-btn btn-list-ordered" title="Ordered list"></a>
-					<a class="edit-btn btn-table" title="Table"></a>
+					<a class="edit-btn btn-bold" title="Bold (Ctrl+B)" wrap="**"></a>
+					<a class="edit-btn btn-italic" title="Italic (Ctrl+I)" wrap="*"></a>
+					<a class="edit-btn btn-strike" title="Strike (Ctrl+S)" wrap="~~"></a>
+					<a class="edit-btn btn-superscript" title="Super (Ctrl+'+')" before="^"></a>
+					<a class="edit-btn btn-link" title="Link (Ctrl+K)" before="[" after="]()"></a>
+					<a class="edit-btn btn-quote" title="Quote (Ctrl+'<')" before="> " multiline></a>
+					<a class="edit-btn btn-code" title="Code" before="    " multiline></a>
+					<a class="edit-btn btn-list-unordered" title="Unordered list" before="* " multiline></a>
+					<a class="edit-btn btn-list-ordered" title="Ordered list" before="%n. " multiline></a>
+					<a class="edit-btn btn-table" title="Table" before="Foo | Bar&#013;---|---&#013;Foo | Bar"></a>
 				</div>
 				<div id="commenting_as">
 					Commenting as: Reddability
 				</div>
 				<div>
 					<textarea id="markdown_textarea">Here is spoiler example!
+
+*hallo*
+
+**hallo**
+
+~~hallo~~
+
+A^2
+
+[Test](http://google.com)
+
+    code
+
+> Quote
+
+* Unordered
+* List
+
+1. Ordered
+2. List
 
 [Spoiler alert!](/spoiler)</textarea>
 				</div>

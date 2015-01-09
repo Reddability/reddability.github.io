@@ -47,3 +47,37 @@ function updatePreview() {
 $(updatePreview);
 
 $(TEXTAREA).bind('input propertychange', updatePreview);
+
+$(document).ready(function() {
+	$('.edit-btn').click(function() {
+		var before = $(this).attr('before') ? $(this).attr('before') : $(this).attr('wrap');
+		before = before ? before : "";
+		var after = $(this).attr('after') ? $(this).attr('after') : $(this).attr('wrap');
+		after = after ? after : ""
+
+		if($(this).attr('multiline') !== undefined) {
+			var selection = $(TEXTAREA).selection('get');
+			var lines = selection.split('\n');
+
+			for(var i = 0; i < lines.length; i++)
+				lines[i] = before.replace('%n', i + 1) + lines[i] + after.replace('%n', i + 1);
+
+			$(TEXTAREA).selection('replace', {
+				text: lines.join('\n'),
+				caret: 'after'
+			});
+		} else {
+			$(TEXTAREA).selection('insert', {
+				text: before,
+				mode: 'before'
+			});
+
+			$(TEXTAREA).selection('insert', {
+				text: after,
+				mode: 'after'
+			});
+		}
+
+		updatePreview();
+	});
+});
